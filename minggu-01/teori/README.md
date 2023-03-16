@@ -38,3 +38,7 @@ Secara default, file sumber Python diperlakukan sebagai dikodekan dalam UTF-8. D
 
 BAB 3
 
+BAB 3
+=> Pengantar Informal Python 
+Pada contoh berikut, input dan output dibedakan dengan ada atau tidaknya prompt ( >>> dan … ): untuk mengulang contoh, Anda harus mengetikkan semuanya setelah prompt, saat prompt muncul; baris yang tidak dimulai dengan prompt adalah keluaran dari juru bahasa. Perhatikan bahwa prompt sekunder pada baris dengan sendirinya dalam contoh berarti Anda harus mengetikkan baris kosong; ini digunakan untuk mengakhiri perintah multi-baris.
+Anda dapat mengganti tampilan petunjuk dan keluaran dengan mengeklik >>> di sudut kanan atas kotak contoh. Jika Anda menyembunyikan prompt dan output untuk contoh, Anda dapat dengan mudah menyalin dan menempelkan baris input ke juru bahasa Anda.
