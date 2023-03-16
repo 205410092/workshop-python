@@ -38,7 +38,8 @@ Secara default, file sumber Python diperlakukan sebagai dikodekan dalam UTF-8. D
 
 BAB 3
 
-BAB 3
-=> Pengantar Informal Python 
 Pada contoh berikut, input dan output dibedakan dengan ada atau tidaknya prompt ( >>> dan … ): untuk mengulang contoh, Anda harus mengetikkan semuanya setelah prompt, saat prompt muncul; baris yang tidak dimulai dengan prompt adalah keluaran dari juru bahasa. Perhatikan bahwa prompt sekunder pada baris dengan sendirinya dalam contoh berarti Anda harus mengetikkan baris kosong; ini digunakan untuk mengakhiri perintah multi-baris.
 Anda dapat mengganti tampilan petunjuk dan keluaran dengan mengeklik >>> di sudut kanan atas kotak contoh. Jika Anda menyembunyikan prompt dan output untuk contoh, Anda dapat dengan mudah menyalin dan menempelkan baris input ke juru bahasa Anda.
+Anda dapat mengganti tampilan petunjuk dan keluaran dengan mengeklik >>> di sudut kanan atas kotak contoh. Jika Anda menyembunyikan prompt dan output untuk contoh, Anda dapat dengan mudah menyalin dan menempelkan baris input ke juru bahasa Anda.
+
+Banyak contoh dalam manual ini, bahkan yang dimasukkan pada permintaan interaktif, menyertakan komentar. Komentar dalam Python dimulai dengan karakter hash, #, dan diperpanjang hingga akhir baris fisik. Sebuah komentar mungkin muncul di awal baris atau setelah spasi putih atau kode, tetapi tidak dalam literal string. Karakter hash dalam literal string hanyalah karakter hash. Karena komentar adalah untuk mengklarifikasi kode dan tidak ditafsirkan oleh Python, komentar dapat dihilangkan saat mengetikkan contoh.
