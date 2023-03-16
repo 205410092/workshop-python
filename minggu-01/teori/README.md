@@ -35,3 +35,6 @@ Ketika perintah dibaca dari tty, interpreter dikatakan dalam mode interaktif . D
 Penerjemah dan Lingkungannya 
 - Pengkodean Kode Sumber
 Secara default, file sumber Python diperlakukan sebagai dikodekan dalam UTF-8. Dalam pengkodean itu, karakter dari sebagian besar bahasa di dunia dapat digunakan secara bersamaan dalam literal string, pengidentifikasi, dan komentar — meskipun perpustakaan standar hanya menggunakan karakter ASCII untuk pengidentifikasi, sebuah konvensi yang harus diikuti oleh kode portabel apa pun. Untuk menampilkan semua karakter ini dengan benar, editor Anda harus mengenali bahwa file tersebut adalah UTF-8, dan harus menggunakan font yang mendukung semua karakter dalam file.
+
+BAB 3
+
