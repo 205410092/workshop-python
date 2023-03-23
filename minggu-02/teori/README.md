@@ -40,3 +40,30 @@ Fungsi ini dapat dipanggil dengan beberapa cara:
 - memberikan salah satu argumen opsional: ask_ok('OK to overwrite the file?', 2)
 - atau bahkan memberikan semua argumen: ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')
 Contoh ini juga memperkenalkan inkata kunci. Ini menguji apakah urutan berisi nilai tertentu atau tidak.
+
+4.8.3. Special parameters
+
+Secara default, argumen dapat diteruskan ke fungsi Python baik dengan posisi atau secara eksplisit dengan kata kunci. Untuk keterbacaan dan kinerja, masuk akal untuk membatasi cara argumen dapat diteruskan sehingga pengembang hanya perlu melihat definisi fungsi untuk menentukan apakah item diteruskan oleh posisi, posisi atau kata kunci, atau kata kunci.dimana /dan *adalah opsional. Jika digunakan, simbol ini menunjukkan jenis parameter dengan cara argumen 
+dapat diteruskan ke fungsi: hanya posisi, posisi atau kata kunci, dan kata kunci saja. Parameter kata kunci juga disebut sebagai parameter bernama.
+
+4.8.3.1. Positional-or-Keyword Arguments
+
+Jika /dan *tidak ada dalam definisi fungsi, argumen dapat diteruskan ke fungsi berdasarkan posisi atau kata kunci.
+
+4.8.3.2. Positional-Only Parameters
+
+Melihat ini sedikit lebih detail, dimungkinkan untuk menandai parameter tertentu sebagai positional-only. Jika positional-only , urutan parameter penting, dan parameter tidak dapat diteruskan dengan kata kunci.Parameter khusus posisi ditempatkan sebelum /(garis miring). The /digunakan untuk secara logis memisahkan parameter hanya posisional dari parameter lainnya. Jika tidak ada /dalam definisi fungsi, tidak ada parameter hanya posisi Parameter yang mengikuti /mungkin berupa posisi-atau-kata kunci atau kata kunci saja.
+
+4.8.3.3. Keyword-Only Arguments
+
+Untuk menandai parameter sebagai hanya kata kunci , yang menunjukkan bahwa parameter harus diteruskan oleh argumen kata kunci, tempatkan an *di daftar argumen tepat sebelum parameter khusus kata kunci pertama.
+
+4.8.3.5. Recap
+
+Kasus penggunaan akan menentukan parameter mana yang akan digunakan dalam definisi fungsi:
+
+def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+Sebagai panduan:
+- Gunakan hanya posisi jika Anda ingin nama parameter tidak tersedia untuk pengguna.Ini berguna ketika nama parameter tidak memiliki arti sebenarnya, jika Anda ingin menerapkan urutan argumen saat fungsi dipanggil atau jika Anda perlu mengambil beberapa parameter posisi dan kata kunci arbitrer.
+- Gunakan hanya kata kunci jika nama memiliki arti dan definisi fungsi lebih mudah dipahami dengan nama yang eksplisit atau Anda ingin mencegah pengguna mengandalkan posisi argumen yang diteruskan.
+- Untuk API, gunakan positional-only untuk mencegah perubahan API yang rusak jika nama parameter diubah di masa mendatang.
