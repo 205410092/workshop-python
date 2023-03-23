@@ -96,3 +96,8 @@ Parser Python tidak menghapus indentasi dari literal string multi-baris di Pytho
 4.8.8. Function Annotations
 
 Anotasi fungsi adalah informasi metadata yang sepenuhnya opsional tentang jenis yang digunakan oleh fungsi yang ditentukan pengguna (lihatPEP 3107 dan PEP 484 untuk informasi lebih lanjut).Anotasi disimpan dalam__annotations__ atribut fungsi sebagai kamus dan tidak berpengaruh pada bagian lain dari fungsi tersebut. Anotasi parameter ditentukan oleh tanda titik dua setelah nama parameter, diikuti dengan ekspresi yang mengevaluasi nilai anotasi. Anotasi pengembalian ditentukan oleh literal->, diikuti oleh ekspresi, antara daftar parameter dan titik dua yang menunjukkan akhir pernyataandef.
+
+4.9. Intermezzo: Coding Style
+
+Sekarang Anda akan menulis potongan Python yang lebih panjang dan lebih kompleks, inilah saat yang tepat untuk berbicara tentang gaya pengkodean . Sebagian besar bahasa dapat ditulis (atau lebih ringkas, diformat ) dalam gaya yang berbeda; beberapa lebih mudah dibaca daripada yang lain. Memudahkan orang lain untuk membaca kode Anda selalu merupakan ide yang bagus, dan mengadopsi gaya pengkodean yang bagus sangat membantu untuk itu.
+Untuk Piton,PEP 8 telah muncul sebagai panduan gaya yang dipatuhi sebagian besar proyek; itu mempromosikan gaya pengkodean yang sangat mudah dibaca dan menyenangkan mata. Setiap pengembang Python harus membacanya di beberapa titik; berikut adalah poin terpenting yang diekstraksi untuk Anda:
