@@ -76,3 +76,17 @@ def write_multiple_items(file, separator, *args):
     file.write(separator.join(args))
 
 Biasanya, argumen variadik ini akan menjadi yang terakhir dalam daftar parameter formal, karena mereka meraup semua argumen masukan yang tersisa yang diteruskan ke fungsi. Parameter formal apa pun yang muncul setelah *args parameter adalah argumen 'kata kunci saja', yang berarti bahwa parameter tersebut hanya dapat digunakan sebagai kata kunci daripada argumen posisional.
+
+4.8.5. Unpacking Argument Lists
+
+Situasi sebaliknya terjadi ketika argumen sudah ada dalam daftar atau tupel tetapi perlu dibongkar untuk pemanggilan fungsi yang memerlukan argumen posisi terpisah. Misalnya, fungsi bawaan range()mengharapkan argumen start dan stop yang terpisah. Jika tidak tersedia secara terpisah, tulis pemanggilan fungsi dengan operator *untuk membongkar argumen dari daftar atau tupel.
+
+4.8.6. Lambda Expressions
+
+Fungsi anonim kecil dapat dibuat dengan lambdakata kunci. Fungsi ini mengembalikan jumlah dari dua argumennya: . Fungsi Lambda dapat digunakan di mana pun objek fungsi diperlukan. Mereka secara sintaksis dibatasi untuk satu ekspresi. Secara semantik, mereka hanyalah gula sintaksis untuk definisi fungsi normal. Seperti definisi fungsi bersarang, fungsi lambda dapat mereferensikan variabel dari cakupan yang memuat:lambda a, b: a+b.
+
+4.8.7. Documentation Strings
+
+Berikut adalah beberapa konvensi tentang konten dan pemformatan string dokumentasi.Baris pertama harus selalu merupakan ringkasan singkat dan ringkas dari tujuan objek. Untuk singkatnya, itu tidak boleh secara eksplisit menyatakan nama atau tipe objek, karena ini tersedia dengan cara lain (kecuali jika nama tersebut kebetulan merupakan kata kerja yang menjelaskan operasi fungsi). Baris ini harus dimulai dengan huruf kapital dan diakhiri dengan titik.
+Jika ada lebih banyak baris dalam string dokumentasi, baris kedua harus kosong, memisahkan ringkasan secara visual dari deskripsi lainnya. Baris berikut harus berupa satu atau lebih paragraf yang menjelaskan konvensi pemanggilan objek, efek sampingnya, dll.
+Parser Python tidak menghapus indentasi dari literal string multi-baris di Python, jadi alat yang memproses dokumentasi harus menghapus indentasi jika diinginkan. Ini dilakukan dengan menggunakan konvensi berikut. Baris tidak kosong pertama setelah baris pertama string menentukan jumlah lekukan untuk seluruh string dokumentasi. (Kita tidak dapat menggunakan baris pertama karena biasanya bersebelahan dengan tanda kutip pembuka string sehingga indentasinya tidak terlihat dalam literal string.) Spasi "setara" dengan indentasi ini kemudian dihapus dari awal semua baris string . Garis yang indentasinya lebih kecil tidak boleh muncul, tetapi jika muncul, semua spasi putih di depannya harus dihilangkan. Kesetaraan spasi harus diuji setelah penambahan tab (biasanya menjadi 8 spasi).
