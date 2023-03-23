@@ -36,3 +36,7 @@ Parameter aktual (argumen) untuk pemanggilan fungsi diperkenalkan di tabel simbo
 
 Bentuk yang paling berguna adalah menentukan nilai default untuk satu atau beberapa argumen. Ini menciptakan fungsi yang dapat dipanggil dengan lebih sedikit argumen daripada yang diizinkan.
 Fungsi ini dapat dipanggil dengan beberapa cara:
+- hanya memberikan argumen wajib: ask_ok('Do you really want to quit?')
+- memberikan salah satu argumen opsional: ask_ok('OK to overwrite the file?', 2)
+- atau bahkan memberikan semua argumen: ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')
+Contoh ini juga memperkenalkan inkata kunci. Ini menguji apakah urutan berisi nilai tertentu atau tidak.
