@@ -71,6 +71,6 @@ Sebagai panduan:
 4.8.4. Arbitrary Argument Lists
 
 Terakhir, opsi yang paling jarang digunakan adalah menentukan bahwa suatu fungsi dapat dipanggil dengan jumlah argumen yang berubah-ubah. Argumen ini akan dibungkus dalam sebuah tuple (lihat Tuples and Sequences ).Sebelum jumlah argumen variabel, nol atau lebih argumen normal dapat terjadi.
+
 def write_multiple_items(file, separator, *args):
     file.write(separator.join(args))
-Biasanya, argumen variadik ini akan menjadi yang terakhir dalam daftar parameter formal, karena mereka meraup semua argumen masukan yang tersisa yang diteruskan ke fungsi. Parameter formal apa pun yang muncul setelah *args parameter adalah argumen 'kata kunci saja', yang berarti bahwa parameter tersebut hanya dapat digunakan sebagai kata kunci daripada argumen posisional.
