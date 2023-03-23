@@ -101,3 +101,21 @@ Anotasi fungsi adalah informasi metadata yang sepenuhnya opsional tentang jenis 
 
 Sekarang Anda akan menulis potongan Python yang lebih panjang dan lebih kompleks, inilah saat yang tepat untuk berbicara tentang gaya pengkodean . Sebagian besar bahasa dapat ditulis (atau lebih ringkas, diformat ) dalam gaya yang berbeda; beberapa lebih mudah dibaca daripada yang lain. Memudahkan orang lain untuk membaca kode Anda selalu merupakan ide yang bagus, dan mengadopsi gaya pengkodean yang bagus sangat membantu untuk itu.
 Untuk Piton,PEP 8 telah muncul sebagai panduan gaya yang dipatuhi sebagian besar proyek; itu mempromosikan gaya pengkodean yang sangat mudah dibaca dan menyenangkan mata. Setiap pengembang Python harus membacanya di beberapa titik; berikut adalah poin terpenting yang diekstraksi untuk Anda:
+
+- Gunakan lekukan 4 spasi, dan tanpa tab.4 spasi adalah kompromi yang baik antara lekukan kecil (memungkinkan kedalaman sarang yang lebih besar) dan lekukan besar (lebih mudah dibaca). Tab menimbulkan kebingungan, dan sebaiknya ditinggalkan.
+
+- Bungkus garis sehingga tidak melebihi 79 karakter.Ini membantu pengguna dengan tampilan kecil dan memungkinkan beberapa file kode berdampingan pada tampilan yang lebih besar.
+
+- Gunakan baris kosong untuk memisahkan fungsi dan kelas, dan blok kode yang lebih besar di dalam fungsi.
+
+- Jika memungkinkan, beri komentar pada baris mereka sendiri.
+
+- Gunakan docstring.
+
+- Gunakan spasi di sekitar operator dan setelah koma, tetapi tidak langsung di dalam konstruksi tanda kurung: .a = f(1, 2) + g(3, 4)
+
+- Beri nama kelas dan fungsi Anda secara konsisten; konvensi ini digunakan UpperCamelCaseuntuk kelas dan lowercase_with_underscoresuntuk fungsi dan metode. Selalu gunakan selfsebagai nama untuk argumen metode pertama (lihat A First Look at Classes untuk informasi lebih lanjut tentang kelas dan metode).
+
+- Jangan gunakan penyandian mewah jika kode Anda dimaksudkan untuk digunakan di lingkungan internasional. Standar Python, UTF-8, atau bahkan ASCII biasa berfungsi paling baik dalam hal apa pun.
+
+- Demikian pula, jangan gunakan karakter non-ASCII dalam pengidentifikasi jika hanya ada sedikit kemungkinan orang yang berbicara bahasa berbeda akan membaca atau mempertahankan kode tersebut.
