@@ -74,3 +74,5 @@ Terakhir, opsi yang paling jarang digunakan adalah menentukan bahwa suatu fungsi
 
 def write_multiple_items(file, separator, *args):
     file.write(separator.join(args))
+
+Biasanya, argumen variadik ini akan menjadi yang terakhir dalam daftar parameter formal, karena mereka meraup semua argumen masukan yang tersisa yang diteruskan ke fungsi. Parameter formal apa pun yang muncul setelah *args parameter adalah argumen 'kata kunci saja', yang berarti bahwa parameter tersebut hanya dapat digunakan sebagai kata kunci daripada argumen posisional.
