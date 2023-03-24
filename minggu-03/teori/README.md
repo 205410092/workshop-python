@@ -52,4 +52,7 @@ Balikkan elemen daftar pada tempatnya.
 - list.copy()
 
 Kembalikan salinan daftar yang dangkal. Setara dengan a[:].
+
 5.1.1. Using Lists as Stacks
+
+Metode daftar membuatnya sangat mudah untuk menggunakan daftar sebagai tumpukan, di mana elemen terakhir yang ditambahkan adalah elemen pertama yang diambil (“last-in, first-out”). Untuk menambahkan item ke atas tumpukan, gunakan append(). Untuk mengambil item dari atas tumpukan, gunakan pop()tanpa indeks eksplisit.
