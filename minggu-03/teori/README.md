@@ -9,4 +9,5 @@ Bab ini menjelaskan beberapa hal yang telah Anda pelajari secara lebih mendetail
 Tipe data daftar memiliki beberapa metode lagi. Berikut ini semua metode objek daftar:
 
 daftar. memperpanjang ( dapat diubah )
+
 Perpanjang daftar dengan menambahkan semua item dari iterable. Setara dengan .a[len(a):] = iterable
