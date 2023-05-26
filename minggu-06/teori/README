@@ -1,4 +1,16 @@
 BAB 8
-
 8. Errors and Exceptions
 Sampai saat ini pesan kesalahan belum banyak disebutkan, tetapi jika Anda telah mencoba contoh-contohnya, Anda mungkin telah melihat beberapa. Ada (setidaknya) dua jenis kesalahan yang dapat dibedakan: kesalahan sintaks dan pengecualian.
+
+8.1. Syntax Errors
+Kesalahan sintaksis, juga dikenal sebagai kesalahan parsing, mungkin merupakan jenis keluhan paling umum yang Anda dapatkan saat masih mempelajari Python.
+
+8.2. Exceptions
+Bahkan jika sebuah pernyataan atau ekspresi benar secara sintaksis, itu dapat menyebabkan kesalahan ketika upaya dilakukan untuk mengeksekusinya. Kesalahan yang terdeteksi selama eksekusi disebut pengecualian dan tidak fatal tanpa syarat: Anda akan segera belajar cara menanganinya dalam program Python.
+
+8.3. Handling Exceptions
+Dimungkinkan untuk menulis program yang menangani pengecualian yang dipilih. Lihat contoh berikut, yang meminta input dari pengguna sampai bilangan bulat yang valid telah dimasukkan, tetapi memungkinkan pengguna untuk menginterupsi program (menggunakan atau apa pun yang didukung oleh sistem operasi); perhatikan bahwa interupsi yang dibuat pengguna ditandai dengan memunculkan pengecualian.Control-CKeyboardInterrupt
+- Pertama, klausa try (pernyataan antara trydan exceptkata kunci) dijalankan.
+- Jika tidak ada pengecualian yang terjadi, kecuali klausa dilewati dan eksekusi pernyataan tryselesai.
+- Jika pengecualian terjadi selama eksekusi klausa try, klausa lainnya akan dilewati. Kemudian, jika tipenya cocok dengan pengecualian yang dinamai menurut exceptkata kunci, klausa kecuali dieksekusi, dan kemudian eksekusi dilanjutkan setelah blok coba/kecuali.
+- Jika pengecualian terjadi yang tidak cocok dengan pengecualian yang disebutkan dalam klausa kecuali , itu diteruskan ke trypernyataan luar; jika tidak ada penangan yang ditemukan, itu adalah pengecualian yang tidak tertangani dan eksekusi berhenti dengan pesan seperti yang ditunjukkan di atas.
