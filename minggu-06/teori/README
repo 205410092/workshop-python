@@ -14,3 +14,27 @@ Dimungkinkan untuk menulis program yang menangani pengecualian yang dipilih. Lih
 - Jika tidak ada pengecualian yang terjadi, kecuali klausa dilewati dan eksekusi pernyataan tryselesai.
 - Jika pengecualian terjadi selama eksekusi klausa try, klausa lainnya akan dilewati. Kemudian, jika tipenya cocok dengan pengecualian yang dinamai menurut exceptkata kunci, klausa kecuali dieksekusi, dan kemudian eksekusi dilanjutkan setelah blok coba/kecuali.
 - Jika pengecualian terjadi yang tidak cocok dengan pengecualian yang disebutkan dalam klausa kecuali , itu diteruskan ke trypernyataan luar; jika tidak ada penangan yang ditemukan, itu adalah pengecualian yang tidak tertangani dan eksekusi berhenti dengan pesan seperti yang ditunjukkan di atas.
+
+8.4. Raising Exceptions
+Pernyataan itu raisememungkinkan pemrogram untuk memaksa pengecualian tertentu terjadi.Misalnya:Satu-satunya argumen untuk raisemenunjukkan pengecualian yang akan diajukan. Ini harus berupa instance pengecualian atau kelas pengecualian (kelas yang berasal dari BaseException, seperti Exceptionatau salah satu subkelasnya). Jika sebuah kelas eksepsi dilewatkan, maka secara implisit akan dibuatkan instance-nya dengan memanggil konstruktornya tanpa argumen.
+
+8.5. Exception Chaining
+Jika pengecualian yang tidak tertangani terjadi di dalam suatu exceptbagian, pengecualian yang ditangani akan dilampirkan padanya dan disertakan dalam pesan kesalahan.
+
+8.6. User-defined Exceptions
+Program dapat menamai pengecualiannya sendiri dengan membuat kelas pengecualian baru (lihat Kelas untuk informasi lebih lanjut tentang kelas Python). Pengecualian biasanya harus diturunkan dari Exceptionkelas, baik secara langsung maupun tidak langsung.
+Kelas pengecualian dapat didefinisikan yang melakukan apa pun yang dapat dilakukan kelas lain, tetapi biasanya tetap sederhana, seringkali hanya menawarkan sejumlah atribut yang memungkinkan informasi tentang kesalahan diekstraksi oleh penangan untuk pengecualian.
+Sebagian besar pengecualian ditentukan dengan nama yang diakhiri dengan "Kesalahan", mirip dengan penamaan pengecualian standar.
+Banyak modul standar menentukan pengecualian mereka sendiri untuk melaporkan kesalahan yang mungkin terjadi pada fungsi yang mereka tentukan.
+
+8.7. Defining Clean-up Actions
+Pernyataan tersebut trymemiliki klausa opsional lain yang dimaksudkan untuk menentukan tindakan pembersihan yang harus dilakukan dalam semua keadaan.Misalnya:Jika finallyada klausa, finally klausa tersebut akan dieksekusi sebagai tugas terakhir sebelum try pernyataan selesai. Klausa finallyberjalan apakah trypernyataan menghasilkan pengecualian atau tidak.
+
+8.8. Predefined Clean-up Actions
+Beberapa objek menentukan tindakan pembersihan standar yang harus dilakukan saat objek tidak lagi diperlukan, terlepas dari apakah operasi menggunakan objek berhasil atau gagal.
+
+8.9. Raising and Handling Multiple Unrelated Exceptions
+Ada situasi di mana perlu melaporkan beberapa pengecualian yang telah terjadi. Ini sering terjadi dalam kerangka kerja konkurensi, ketika beberapa tugas mungkin gagal secara paralel, tetapi ada juga kasus penggunaan lain yang diinginkan untuk melanjutkan eksekusi dan mengumpulkan banyak kesalahan daripada memunculkan pengecualian pertama.
+
+8.10. Enriching Exceptions with Notes
+Saat pengecualian dibuat untuk dimunculkan, biasanya diinisialisasi dengan informasi yang menjelaskan kesalahan yang terjadi. Ada kasus di mana berguna untuk menambahkan informasi setelah pengecualian tertangkap. Untuk tujuan ini, pengecualian memiliki metode add_note(note)yang menerima string dan menambahkannya ke daftar catatan pengecualian. Render traceback standar menyertakan semua catatan, sesuai urutan penambahannya, setelah pengecualian.
